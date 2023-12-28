@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python analysis.py
+    volumes:
+      - ./export/results:/export/results

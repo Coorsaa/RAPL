@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rapl"
+version = "0.1.0"
+description = "AutoGluon on Radiomics Data"
+authors = ["Your Name <your@email.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11, <3.12"
+loguru = "^0.7.2"
+envyaml = "^1.10.211231"
+pandas = "^2.0.3"
+jupyter = "^1.0.0"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
