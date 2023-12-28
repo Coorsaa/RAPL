@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     command: python analysis.py
     volumes:
-      - ./data:/data
-      - ./results:/results
+      - ./data:/home/data
+      - ./results:/home/results
     privileged: true
