@@ -2,7 +2,7 @@ from autogluon.tabular import TabularPredictor, TabularDataset
 import json
 
 label = "pdl1"
-time_limit = 60 * 1 # for quick demonstration only, you should set this to longest time you are willing to wait (in seconds)
+time_limit = 60 * 60 # for quick demonstration only, you should set this to longest time you are willing to wait (in seconds)
 metric = 'roc_auc'  # specify your evaluation metric here
 
 
@@ -15,8 +15,9 @@ for i in range(1,11):
         eval_metric=metric,
     ).fit(
         train_data,
+        num_cpus=4,
         time_limit=time_limit,
-        presets='best_quality'
+        presets="best_quality"
     )
     test_data = TabularDataset(f"/home/data/test/test_{i}.csv")
     scores[i] = predictor.evaluate(test_data)

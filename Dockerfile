@@ -24,7 +24,7 @@ RUN pip install --upgrade pip &&\
 
 RUN pip install setuptools wheel && \
     pip install "mxnet<2.0.0" && \
-    pip install --pre autogluon.tabular
+    pip install --pre autogluon.tabular[all]
 
 COPY . /home
 
